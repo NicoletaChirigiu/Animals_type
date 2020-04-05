@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../pic/hero-cat-pic.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../pic/hero-cat-pic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.hero .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+}
+
+.hero .navBar .logo {
+  max-width: 100px;
+}
+
+.hero .navBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .navBar ul li {
+  padding: 10px;
+  margin: 5px;
+}
+
+.hero .navBar ul li a {
+  color: white;
+}
+
+.hero .hero-wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 600;
+}
+
+.hero .hero-wraper .hero-info {
+  font-size: 20px;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  background-color: black;
+}
+
+.info-section {
+  background-color: #cdd0d3;
+}
+
+.info-section .loader {
+  visibility: hidden;
+  position: absolute;
+  bottom: -25%;
+  left: 45%;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.info-section .info-title {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.info-section .cat-info {
+  position: relative;
+  margin-top: 25px;
+}
+
+.info-section .cat-info .text-info {
+  margin: 5px;
+  padding: 20px;
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  border: 1px solid #000;
+}
+
+.info-section .cat-info .type {
+  margin: 10px;
+  display: inline;
+  top: -20%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  background-color: #cdd0d3;
+  border: 1px solid red;
+  z-index: 1;
+}
+
+.info-section .cat-info .upvotes {
+  display: inline;
+  top: 0;
+  right: 0;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  background-color: #cdd0d3;
+  border: 1px solid red;
+  z-index: 1;
+}
+
+.info-section .user {
+  margin: 5px;
+  padding: 20px;
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  border: 1px solid #000;
+}
+/*# sourceMappingURL=style.css.map */

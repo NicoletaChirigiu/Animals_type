@@ -1,0 +1,82 @@
+@import './variables';
+
+.footer {
+  color: map-get($colors, links-pages);
+  text-align: center;
+  font-size: 10px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  background-color: black;
+}
+
+.info-section {
+  background-color: map-get($colors, bottom);
+  .loader {
+    visibility: hidden;
+    position: absolute;
+    bottom: -25%;
+    left: 45%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .info-title {
+    text-align: center;
+    @include font(20px, 400);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .cat-info {
+    position: relative;
+    margin-top: 25px;
+    .text-info {
+      margin: 5px;
+      padding: 20px;
+      @include font(15px, 400);
+      border: 1px solid #000;
+    }
+    .type {
+      margin: 10px;
+      display: inline;
+      top: -20%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      @include font(15px, 400);
+      background-color: #cdd0d3;
+      border: 1px solid red;
+      z-index: 1;
+    }
+    .upvotes {
+      display: inline;
+      top: 0;
+      right: 0;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      @include font(15px, 400);
+      background-color: #cdd0d3;
+      border: 1px solid red;
+      z-index: 1;
+    }
+  }
+  .user {
+    margin: 5px;
+    padding: 20px;
+    @include font(15px, 400);
+    border: 1px solid #000;
+  }
+}

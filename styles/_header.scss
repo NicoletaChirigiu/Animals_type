@@ -1,0 +1,41 @@
+@import './variables';
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../pic/hero-cat-pic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  .navBar {
+    @include flex(space-between, 0);
+    .logo {
+      max-width: 100px;
+    }
+    ul {
+      @include flex(space-around, center);
+      li {
+        padding: 10px;
+        margin: 5px;
+        a {
+          color: map-get($colors, links-pages);
+        }
+      }
+    }
+  }
+  .hero-wraper {
+    //   margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: map-get($colors, links-pages);
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-weight: 600;
+    .hero-info {
+      font-size: 20px;
+    }
+  }
+}

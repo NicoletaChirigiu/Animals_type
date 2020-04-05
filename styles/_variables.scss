@@ -1,0 +1,17 @@
+@mixin flex($content, $item) {
+  display: flex;
+  justify-content: $content;
+  align-items: $item;
+}
+
+$colors: (
+  links-pages: white,
+  bottom: #cdd0d3,
+  border: #000
+);
+
+@mixin font($size,$weight) {
+  font-size: $size;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: $weight;
+}
