@@ -1,0 +1,22 @@
+{
+  "name": "animal_type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoletaChirigiu/Animals_type.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoletaChirigiu/Animals_type/issues"
+  },
+  "homepage": "https://github.com/NicoletaChirigiu/Animals_type#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
