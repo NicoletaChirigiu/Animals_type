@@ -14,13 +14,13 @@
   .loader {
     // visibility: hidden;
     position: absolute;
-    bottom: -22%;
-    left: 45%;
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
+    bottom: -8%;
+    left: 55%;
+    border: 10px solid #e7e2e2;
+    border-top: 10px solid #595c5e;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     animation: spin 2s linear infinite;
   }
 
@@ -46,7 +46,6 @@
       padding: 20px;
       @include font(15px, 400);
       border: 1px solid #000;
-      visibility: hidden;
     }
     .type {
       margin: 10px;
@@ -60,7 +59,6 @@
       background-color: #cdd0d3;
       border: 1px solid red;
       z-index: 1;
-      visibility: hidden;
     }
     .upvotes {
       display: inline;
@@ -73,11 +71,9 @@
       background-color: #cdd0d3;
       border: 1px solid red;
       z-index: 1;
-      visibility: hidden;
     }
   }
   .user {
-    visibility: hidden;
     margin: 5px;
     padding: 20px;
     @include font(15px, 400);

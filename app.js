@@ -1,42 +1,53 @@
-import Axios from 'axios';
+// import axios from 'axios';
+// const axios = require('axios');
 
-const APIURL = 'http://www.dnd5eapi.co/api/spells/acid-arrow/';
+// import Axios from 'axios';
+
+// const APIURL = 'https://cat-fact.herokuapp.com/facts';
+// const APIURL = 'http://www.dnd5eapi.co/api/spells/acid-arrow/';
+const APIURL = 'https://reqres.in/api/users';
 let type = document.getElementsByClassName('type');
 let textInfo = document.getElementsByClassName('text-info');
 let upVotes = document.getElementsByClassName('upvotes');
 let infoSection = document.getElementsByClassName('info-section');
 let user = document.getElementsByClassName('user');
 let loader = document.getElementsByClassName('loader');
+let info = document.getElementsByClassName('cat-info');
+let userId;
 
-window.onload = () => {
-  // console.log('test');
+// toggle to none until that api informations are  loaded
+info[0].style.display = 'none';
 
-  // setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-
-  loader.style.display = 'none';
-  user.style.display = 'block';
-  upVotes.style.display = 'block';
-  type.style.display = 'block';
-  textInfo.style.display = 'block';
+let settings = () => {
+  loader[0].style.display = 'none';
+  info[0].style.display = 'block';
 };
 
-// fetch(APIURL)
-//   .then((response) => {
-//     console.log(response);
+const getData = () => {
+  axios
+    .get('https://reqres.in/api/users')
+    .then((response) => {
+      // console.log(response);
+    })
+    .catch((err) => {
+      console.log('ups! Something is wrong ', err);
+    });
+};
 
-//     // return response.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((error) => {
-//     console.log(' this is not working');
-//   });
 
-axios.get('http://www.dnd5eapi.co/api/spells/acid-arrow/')
-  .then((response) => {
-    console.log(reponse);
-  })
-  .catch((error) => {
-    console.log('nu merge');
-  });
+// https://reqres.in/api/users?page=2
+userId = 1;
+const makeRequest = async () => {
+  try {
+    settings();
+    let response = await axios.get(`https://reqres.in/api/users/`);
+    let dataArr = response.data.data;
+    console.log(dataArr[0].email);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+makeRequest();
+
+// getData();
